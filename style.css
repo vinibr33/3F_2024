@@ -23,6 +23,7 @@ span{
        align-items: center;
        width: 100%;
        max-width: 1200px;
+       margin: 0 auto;
    }
    .titulo-princpal{
        text-align: center;
@@ -51,6 +52,20 @@ span{
 }
 .aba-conteudo.ativo{
     display: block;
+}
+.abas-textos{
+    background-color: var(--botao-inativo);
+    padding: 40px;
+    border-radius: 15px;
+}
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--verde);
 }
    .botoes{
        display: block;

@@ -7,10 +7,20 @@ const tempoObjetivo2 = new Date(2024,11,31,23,59)
 const tempoObjetivo3 = new Date(2024,11,31,23,59)
 const tempoObjetivo4 = new Date(2024,11,31,23,59)
 let agora = new Date();
-contador[0].textContent = tempoObjetivo1-agora
+let segundos 
+segundos = (tempoObjetivo1-agora)/1000;
+let minutos 
+minutos = segundos/60
+let horas 
+horas = minutos/60
+let dias
+dias = horas/24
+contador[0].textContent = `faltam ${dias} dias, ${horas}
+horas, ${minutos} minutos e ${segundos} segundos`
 contador[1].textContent = tempoObjetivo2-agora
 contador[2].textContent = tempoObjetivo3-agora
 contador[3].textContent = tempoObjetivo4-agora
+
 for (let i = 0 ; i < botoes.length ; i++){
     botoes[i].onclick = function (){
         for (let j = 0; j < botoes.length ; j++){

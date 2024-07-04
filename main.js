@@ -3,9 +3,9 @@ const conteudo = document.querySelectorAll(".aba-conteudo");
 const contador = document.querySelectorAll(".contador");
 contador[0].textContent = "Olá"
 const tempoObjetivo1 = new Date(2024,11,31,23,59)
-const tempoObjetivo2 = new Date(2024,11,31,23,59)
-const tempoObjetivo3 = new Date(2024,11,31,23,59)
-const tempoObjetivo4 = new Date(2024,11,31,23,59)
+const tempoObjetivo2 = new Date(2025,11,31,23,59)
+const tempoObjetivo3 = new Date(2025,10,31,23,59)
+const tempoObjetivo4 = new Date(2025,09,31,23,59)
 
 function calculaTempo(tempoObjetivo){
     const agora = new Date()
@@ -20,34 +20,22 @@ function calculaTempo(tempoObjetivo){
     segundos = Math.floor(segundos)
     minutos = Math.floor(minutos)
     horas = Math.floor(horas)
-    dias = Math.floor(horas)
+    dias = Math.floor(dias)
 
     segundos = segundos%60
     minutos = minutos%60
     horas = horas%24
+    return [dias,horas,minutos,segundos]
 }
+let contadorPrimeiro = calculaTempo(tempoObjetivo1)
+contador[0].textContent = `Faltam ${contadorPrimeiro[0]} dias, ${contadorPrimeiro[1]} horas, ${contadorPrimeiro[2]} minutos, ${contadorPrimeiro[3]} segundos`
+let contadorSegundo = calculaTempo(tempoObjetivo2)
+contador[1].textContent = `Faltam ${contadorSegundo[0]} dias, ${contadorSegundo[1]} horas, ${contadorSegundo[2]} minutos, ${contadorSegundo[3]} segundos`
+let contadorTerceiro = calculaTempo(tempoObjetivo3)
+contador[2].textContent = `Faltam ${contadorTerceiro[0]} dias, ${contadorTerceiro[1]} horas, ${contadorTerceiro[2]} minutos, ${contadorTerceiro[3]} segundos`
+let contadorQuarto = calculaTempo(tempoObjetivo4)
+contador[3].textContent = `Faltam ${contadorQuarto[0]} dias, ${contadorQuarto[1]} horas, ${contadorQuarto[2]} minutos, ${contadorQuarto[3]} segundos`
 
-let agora = new Date();
-let segundos 
-segundos = (tempoObjetivo1-agora)/1000;
-let minutos 
-minutos = segundos/60
-let horas 
-horas = minutos/60
-let dias
-dias = horas/24
-segundos = Math.floor(segundos);
-minutos = Math.floor(minutos);
-horas = Math.floor(horas);
-dias = Math.floor(dias);
-segundos = segundos%60;
-minutos = minutos%60;
-horas = horas%24;
-contador[0].textContent = `faltam ${dias} dias, ${horas}
-horas, ${minutos} minutos e ${segundos} segundos`
-contador[1].textContent = tempoObjetivo2-agora
-contador[2].textContent = tempoObjetivo3-agora
-contador[3].textContent = tempoObjetivo4-agora
 
 for (let i = 0 ; i < botoes.length ; i++){
     botoes[i].onclick = function (){

@@ -28,6 +28,13 @@ span{
        max-width: 1200px;
        margin: 0 auto;
    }
+
+   .contador{
+       padding: 0  16px;
+       text-align: center;
+       display: flex;
+       justify-content: center;
+   }
    .titulo-princpal{
        text-align: center;
        width: 100%;

@@ -1,114 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root{
-    --cor-de-fundo: #1e1e1e;
-    --verde: #6fff57;
-    --branco: #ffffff;
-    --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58,55,94,0.5);
-    --texto-fundo: rgba(58,55,94,0.3);
-}
-body{
-    background-color: var(--cor-de-fundo);
-    font-family: 'Chakra Petch', sans-serif;
+    --cor-de-fundo: #FFDBB5;
+    --cor-primaria: #6C4E31;
+    --cor-secundária: #96763f;
+    --font: 'Nunito' sans-serif;
 }
 *{
-    color: var(--branco);
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-primaria);
+    height: 100vh;
+    font-family: var(--font);
+}
+
+header{
+    background-color: var(--cor-primaria);
+    text-align: center;
+    /* Alinhamento do texto */
+}
+
+h1{
+    color: var(--cor-de-fundo);
+    /* Cor da fonte */
+    font-size: 2rem;
+    /* Tamanho da fonte */
+    font-weight: 700; 
+    /* "Peso" da fonte */
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+nav a{
+    /* text-decoration serve para adicionar ou remover
+    uma decoração no texto */
+    text-decoration: none;
+    color: var(--cor-de-fundo);
+    /* Espaçamento externo */
+    margin: 0 2rem 1rem 0;
+    font-size: 1.2rem;
+}
+/* Links que estão dentro da tag nav, estilização para
+quando passa o mouse em cima */
+nav a:hover{
+    text-decoration: underline;
+    /* Reduz o tamanho */
+    transform: scale(0.9);
+    /* Cria uma transição com 0.5s para o transform */
+    transition: transform 1.5s;
+}
+
 span{
-    color: var(--verde);
-   
-   }
-   .conteudo-principal{
-       display:flex;
-       flex-direction:column;
-       justify-content: center;
-       align-items: center;
-       width: 100%;
-       max-width: 1200px;
-       margin: 0 auto;
-   }
+    color: var(--cor-secundária);
+    font-weight: bold;
+}
 
-   .contador{
-       padding: 0  16px;
-       text-align: center;
-       display: flex;
-       justify-content: center;
-   }
-
-   .contador-digito-numero{
-       font-size: 80px;
-       margin: 0;
-       padding: 0 10px;
-   }
-
-   .contador-digito-texto{
-       color: var(--verde);
-       font-size: 20px;
-       margin: 0;
-   }
-   .titulo-princpal{
-       text-align: center;
-       width: 100%;
-       font-size: 32px;
-   }
-   .botao{
-       background-color: var(--botao-inativo);
-       color: white;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding: 1em;
-       font-size: 18px;
-       width: 100%;
-       border-bottom: 4px solid var(--botao-ativo);
-       border-left: 2px solid var(--botao-ativo);
-       border-right: 2px solid var(--botao-ativo);
-   }
-   .botao.ativo{
-    background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
-}
-.aba-conteudo{
-    display: none;
-}
-.aba-conteudo.ativo{
-    display: block;
-}
-.abas-textos{
-    background-color: var(--botao-inativo);
-    padding: 40px;
-    border-radius: 15px;
-}
-.aba-conteudo-titulo-principal{
-    font-size: 28px;
+footer{
+    background-color: var(--cor-primaria);
+    color: var(--cor-de-fundo);
     text-align: center;
 }
-.aba-conteudo-titulo-secundario{
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--verde);
+
+
+.graficos-container{
+    margin: 5rem;
 }
-   .botoes{
-       display: block;
-   }
 
-   .botao:first-child{
-       border-radius: 20px 20px 0 0;
-   }
-
-   .botao:last-child{
-       border-radius: 0 0 20px 20px;
-   }
-   @media screen and (min-width: 700px){
-       .botoes{
-           display: flex;
-       }
-       .botao:last-child{
-           border-radius: 0 20px 20px 0;
-       }
-       .botao:first-child{
-           border-radius: 20px 0 0 20px;
-       }
-   }
-   
+.graficos-texto{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 2rem;
+    border: var(--cor-secundária) solid 2px;
+}
